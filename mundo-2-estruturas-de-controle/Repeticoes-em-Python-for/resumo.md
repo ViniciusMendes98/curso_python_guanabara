@@ -1,31 +1,71 @@
+# Strings em Python 
+
+## Fatiamento
+
+```python
 frase = 'Curso em Vídeo Python'
-print(frase[0:21:2]) #Vai printar do 0 até o 21 caractere pulando de 2 em 2
-print(frase[:5]) #Vai começar antes do dois pontos, ou seja, do início, já que não há nada escrito
-print(frase[15:]) #Vai começar do 15 até o final
-print(frase[9::3]) #entre o os dois pontos não há nada, então vai contar do 9 até o final pulando em 3 em 3
-print(len(frase)) #Vai mostrar o comprimento da string
-print(frase.count('a')) #Vai contar quantas vezes aparece a letra na frase (diferencia A de a)
-print(frase.count('o',15,80)) #Vai mostrar quantos "o" tem entre a 15º letra e a última
-print(frase.find('Python')) #Vai mostrar de onde começou a sequência de string
-print('Curso'in frase) #Existe "Curso" em frase? True ou False
-print(frase.replace('Python', 'Android')) #Irá substituir "Python" por "Android"
-print(frase.upper()) #Deixará toda a frase em caixa alta
-print(frase.lower()) #Deixará toda a frase em letras minúsculas
-print(frase.capitalize()) #Todas as letras ficrão em letra minúscula, e a primeira ficará em caixa alta
-print(frase.title()) #As primeiras letras de cada palavra ficarão em maiúsculas
+
+print(frase[0:21:2])  # Do índice 0 até o 21, pulando de 2 em 2
+print(frase[:5])     # Do início até o índice 5
+print(frase[15:])    # Do índice 15 até o final
+print(frase[9::3])   # Do índice 9 até o final, pulando de 3 em 3
+```
+
+## Funções para Strings
+
+```python
+print(len(frase))              # Mostra o comprimento da string
+print(frase.count('a'))        # Conta quantas vezes 'a' aparece
+print(frase.count('o', 15, 80)) # Conta 'o' entre os índices 15 e 80
+print(frase.find('Python'))    # Mostra onde começa 'Python'
+print('Curso' in frase)        # Verifica se 'Curso' existe na frase
+```
+
+## Manipulação de Strings
+
+```python
+print(frase.replace('Python', 'Android'))  # Substitui 'Python' por 'Android'
+print(frase.upper())                       # Converte para maiúsculas
+print(frase.lower())                       # Converte para minúsculas
+print(frase.capitalize())                  # Primeira letra maiúscula
+print(frase.title())                       # Primeira letra de cada palavra maiúscula
+```
+
+## Removendo espaços
+
+```python
 frase2 = '   Aprenda Python   '
-print(frase2.strip()) #Vai remover todos os espaços inúteis antes e depois da string
-print(frase2.rstrip()) #Removerá os espaços inúteis a direita
-print(frase2.lstrip()) #Removerá os espaços inúteis a esquerda
-print(frase.split()) #Onde houver espaços o split fará uma divisão
+
+print(frase2.strip())   # Remove espaços dos dois lados
+print(frase2.rstrip())  # Remove espaços da direita
+print(frase2.lstrip())  # Remove espaços da esquerda
+```
+
+## Split e Join
+
+```python
+print(frase.split())          # Divide a string onde houver espaços
+
 dividido = frase.split()
-print(dividido[2][3])
-print(''.join(frase.split()))
-print(frase[::-1]) #Vai escrever ao contrário
+print(dividido[2][3])         # Acessa o índice 3 da terceira palavra
+
+print(''.join(frase.split())) # Junta a frase removendo os espaços
+```
+
+## Invertendo uma String
+
+```python
+print(frase[::-1])            # Escreve a string ao contrário
+
 frase_invertida = frase[::-1]
 print(frase_invertida)
+```
 
+## Condicional com String
+
+```python
 if 'Curso' in frase:
     print('YES')
 else:
     print('NO')
+```
